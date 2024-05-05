@@ -5,9 +5,9 @@ const stop=document.querySelector("#stop");
 const start=document.querySelector("#start");
 let intervalId=null;
 start.addEventListener('click', timer)
-
 time.innerHTML=`${date.toLocaleTimeString()}`;
 function timer(){
+  clearInterval(intervalId);
   intervalId=setInterval(function(){
     let date=new Date();
     time.innerHTML=`${date.toLocaleTimeString()}`
