@@ -31,7 +31,12 @@ height:18vmin;
 width:18vh;
 border-radius: 1rem;
 border:none;
-box-shadow:0 0 1rem rgba(0,0,0,0.1)
+box-shadow:0 0 1rem rgba(0,0,0,0.1);
+/* transition: transform(1); */
+}
+.box:hover{
+  transform:scale(1.2);
+  background-color:bisque;
 }
 #reset-btn{
   padding:1rem;
