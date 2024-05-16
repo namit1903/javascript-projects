@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header>
+    <h1>Weather App</h1>
+    <form id="search-form">
+        <input type="text" id="city-input" placeholder="Enter city name">
+        <button type="submit">Search</button>
+    </form>
+</header>
+
+<main>
+    <!-- Current Weather Section -->
+    <section id="current-weather">
+        <h2>Current Weather</h2>
+        <div class="weather-details">
+            <div class="weather-icon">
+                <img id="current-icon" src="" alt="Weather Icon">
+            </div>
+            <div class="weather-info">
+                <p id="city-name"></p>
+                <p id="current-temperature"></p>
+                <p id="weather-description"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Forecast Section -->
+    <section id="forecast">
+        <h2>Forecast</h2>
+        <div class="forecast-container">
+            <!-- Each forecast item -->
+            <div class="forecast-item">
+                <p class="forecast-date"></p>
+                <img class="forecast-icon" src="" alt="Weather Icon">
+                <p class="forecast-temperature"></p>
+            </div>
+            <!-- Add more forecast items as needed -->
+        </div>
+    </section>
+
+    <!-- Additional Information Section -->
+  <!-- <section id="additional-info">
+        <h2>Additional Information</h2>
+        <div class="additional-details">
+            <p id="humidity"></p>
+            <p id="wind-speed"></p>
+            <p id="pressure"></p>
+        </div>
+    </section>-->
+</main>
+
+<footer>
+    <p>Weather App &copy 2024 by Namit Thakur</p>
+</footer>
+</body>
+<script src="./script.js"></script>
+</html>
