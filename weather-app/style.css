@@ -61,6 +61,14 @@ main {
   margin-bottom: 20px;
   text-align: center;
 }
+#current-weather:hover {
+  background-color: #87cefa;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  transform: scale(1.2);
+}
 
 .weather-details {
   display: flex;
@@ -115,6 +123,13 @@ main {
   border-radius: 10px;
   padding: 20px;
   text-align: center;
+}
+#additional-info:hover {
+  background-color: #98fb98;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transform: scale(1.2);
 }
 
 .additional-details p {
