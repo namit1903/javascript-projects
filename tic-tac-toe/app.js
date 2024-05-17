@@ -1,8 +1,15 @@
 let box=document.querySelectorAll(".box");
-let game=document.querySelector(".game");
+let game=document.querySelector(".game");//and used event delegation
 let resetBtn=document.querySelector("#reset-btn");
 resetBtn.addEventListener("click",function(){
-  window.location.reload();
+  //reset function
+  console.log(box.textContent);
+  box.forEach((item)=>{
+    item.textContent=""
+    item.disabled=false;
+  }
+
+  )
 })
 let turn0=true;
 let winPattern=[
@@ -16,9 +23,13 @@ let winPattern=[
   [2, 4, 6]
 ];
 game.addEventListener('click',(e)=>{
-  // console.log(e.target)
+  
+  console.log('event',e)
+  console.log("check this",e.target==game)
+  if(e.target==game) return;
+  // e.stopPropagation()
   // console.log(e.target.classList.contains('box'));
-  let selection=e.target;
+  let selection=e.target;//box selcted
   // console.log(turn0)
    if(turn0){
 selection.innerHTML="0";
@@ -30,6 +41,7 @@ selection.disabled=true;
  turn0=true;
  selection.disabled=true;
   }
+  //business logic
   if(checkWin()){
     console.log("winner")
     setTimeout(()=>{
@@ -47,11 +59,13 @@ selection.disabled=true;
 
 })
 
-function checkWin(){
-  let cells=document.querySelectorAll(".box")
+function checkWin(){//closure usage
+  let cells=document.querySelectorAll(".box")//get a nodelist
+  // let cells=document.getElementsByClassName("box")//get a Html collection
+  console.log(cells)
   return winPattern.some(condition=>{
     const [a,b,c]=condition;
-    console.log("hi",a,cells[a]);
+    // console.log("hi",a,cells[a]);
     return cells[a].textContent &&
     cells[a].textContent === cells[b].textContent &&
     cells[a].textContent === cells[c].textContent;
