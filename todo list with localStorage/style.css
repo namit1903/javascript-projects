@@ -59,3 +59,9 @@ background-color: greenyellow;
 transform: scale(1.3);
 }
 
+.clear:hover{
+  /* color:greenyellow; */
+  padding: 20px;
+  font-size: 15px;
+  /* transform: scale(1.2) */
+}
