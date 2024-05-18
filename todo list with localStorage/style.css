@@ -1,0 +1,61 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1{
+  color:rgb(237, 145, 145);
+ text-align: center;
+ margin-left: 0vw;
+}
+.box{
+  text-align: center;
+  /* border:3px solid rgb(225, 83, 83) */
+  font-weight: bold;
+}
+.container{
+  margin-top: 20px;
+  display: flex;
+     flex-wrap: wrap;
+    justify-content: center;
+}
+.container h3{
+  flex: 1;
+  text-align: center;
+}
+.todo{
+  height: 5vh;
+  width: 50vw;
+  font-weight: bold;
+  border: 1px dashed rgb(190, 35, 84);
+}
+.tasks{
+  /* display: flex; */
+  flex-wrap: wrap;
+  justify-content: center;
+  /* justify-content: center; */
+}
+.btn-clear{
+  /* line-height: 67%; */
+  margin:auto;
+  text-align: center;
+}
+.todo{
+  display:flex;
+  justify-content: space-between;
+}
+.fa{
+  align-self: flex-end;
+  margin-left: 70px;
+  transform: scale(1.5);
+}
+.fa:hover{
+  align-self: flex-end;
+  margin-left: 70px;
+  transform: scale(1.5);
+}
+.btn:hover{
+background-color: greenyellow;
+transform: scale(1.3);
+}
+
