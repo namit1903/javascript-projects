@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign UP</title>
+</head>
+<body>
+  <form id="register-form">
+    <input type ="text " id="username">
+    <input type ="password" id="password">
+    <button type="submit" >Register NOW!</button>
+  </form>
+  <script>
+    const form=document.getElementById("register-form");
+    const username=document.getElementById("username");
+    const password=document.getElementById("password");
+    form.addEventListener("submit",async(e)=>{
+        e.preventDefault();
+try{
+        const response=await fetch('/register',{
+          method:'POST',
+          headers:{//contain metadata-->ki body me kis type ka data hai
+            'Content-Type': 'application/json'
+          },
+           body:JSON.stringify({username:username.value,password:password.value})
+        })
+        const result=await response.json();
+        const{id}=result;
+        //now redirect the user to profile page
+        window.location.replace(`http://localhost:3000/profile.html?user_Id=${id}`)
+      }
+      catch(error){
+        console.log("registeration me error aaya hai")
+        throw error;
+      }
+      })
+    
+  </script>
+</body>
+</html>

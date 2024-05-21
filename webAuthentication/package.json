@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-   "dev":"nodemon index.js "
+    "dev": "nodemon index.js "
   },
   "keywords": [],
   "author": "",
@@ -11,5 +11,9 @@
   "description": "",
   "devDependencies": {
     "nodemon": "^3.1.0"
+  },
+  "dependencies": {
+    "@simplewebauthn/server": "^10.0.0",
+    "express": "^4.19.2"
   }
 }
